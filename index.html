@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Ryan Hartzell's ThreeJS Playground</title>
+        <style>
+            body {
+                background-color: blueviolet;
+                overflow: hidden;
+                margin: 0rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- NOTE: If I were to flex in the row direction at the top level, I could probably have a fixed render window on the right (for large screens) and a scrollable website on the left side :) -->
+        <div style="display: flex; flex-direction: column; align-items: center; align-content: center; justify-content: center;">
+            <h1>Hi everyone! Welcome to my dumb little SDA render</h1>
+            
+            <!-- Another note about canvases... I wonder if I can render to a 1024px^2 canvas but then scale it separately based on window size. That'd ensure I'm always using a sensible pixel IFOV that is fixed for the render, and then that can be displayed by the browser however it needs to at whatever resolution. Want to actually SEE the enlarged pixels for instance. -->
+            <canvas id="can" height="1024px" width="1024px"></canvas> 
+        </div>
+    </body>
+    <script type="module" src="bundle.js"></script>
+</html>
